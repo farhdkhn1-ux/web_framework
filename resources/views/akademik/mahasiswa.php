@@ -10,7 +10,7 @@
     <h1>Daftar Mahasiswa</h1>
     <ol>
         <li><?= $mhs1 ?></li>
-        <li><?= $mhs2 ?></li>
+        <li>{{  $mhs2 }} </li>
         <li>Bill gates</li>
         <li>John Doe</li>
         <li>Linus Torvalds</li>
@@ -21,4 +21,4 @@
         <img src="/images/pnp.png" alt="Logo Universitas" width="500px">
     </div>
 </body>
-</html>
+</html> 

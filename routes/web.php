@@ -1,12 +1,16 @@
 <?php
 
+use App\Http\Controllers\Auth\dosenController;
+use App\Http\Controllers\MahasiswaController;
 use Illuminate\Support\Facades\Route;
 
 // Default route
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/mahasiswa',[MahasiswaController::class, 'index']);
+Route::get('/dosen', [dosenController::class, 'index']);
+/*
 // Mahasiswa dengan parameter nama & nim
 Route::get('/mahasiswa/{nama}/{nim}', function($nama, $nim){
     return "Selamat datang $nama dengan NIM $nim";
@@ -18,10 +22,10 @@ Route::get('/mahasiswa/{nama}', function($nama){
 });
 
 // Dosen dengan parameter optional
-Route::get('/dosen/{nama?}/{nip?}', function($nama = '', $nip = ''){
+/*Route::get('/dosen/{nama?}/{nip?}', function($nama = '', $nip = ''){
     return "Selamat datang $nama dengan NIP $nip";
-});
-
+});*/
+/*
 // Redirect & fallback
 Route::redirect('/home', '/');
 Route::fallback(function(){
@@ -80,3 +84,5 @@ Route::get('/pnp/{jurusan}/{prodi}', function ($jurusan, $prodi) {
     $data = [$jurusan, $prodi];
     return view('akademik.prodi')->with('data', $data);
 })->name('prodi');
+
+*/
